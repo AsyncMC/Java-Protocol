@@ -16,13 +16,15 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-import com.github.asyncmc.java.dummy.Dummy
+package com.github.asyncmc.protocol.java
+
+import com.github.asyncmc.protocol.java.dummy.Dummy2
 import org.junit.jupiter.api.Test
 
-internal class DummyTest {
+internal class Dummy2Test {
     @Test
     fun dummyTest() {
-        val dummy = Dummy()
-        dummy.codecov("i don't know")
+        val dummy = Dummy2()
+        dummy.codecovNeedsMoreFiles(areYouWorkingNow = "i don't know")
     }
 }
