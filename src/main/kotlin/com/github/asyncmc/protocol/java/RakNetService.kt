@@ -16,12 +16,11 @@
  *     along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.asyncmc.protocol.java.dummy
+package com.github.asyncmc.protocol.java
 
-class Dummy2 {
-    fun codecovNeedsMoreFiles(areYouWorkingNow: String) {
-        if (areYouWorkingNow == "sure") {
-            println("cool!")
-        }
-    }
+/**
+ * @author joserobjr
+ * @since 2021-01-06
+ */
+interface RakNetService {
 }

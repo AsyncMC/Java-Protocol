@@ -1,6 +1,6 @@
 /*
  *     AsyncMC's Java Protocol - An open source Minecraft Java Edition protocol library implementation
- *     Copyright (C) 2020 joserobjr@gamemods.com.br
+ *     Copyright (C) 2021 joserobjr
  *
  *     This program is free software: you can redistribute it and/or modify
  *     it under the terms of the GNU Affero General Public License as published

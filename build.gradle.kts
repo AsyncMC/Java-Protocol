@@ -19,17 +19,17 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.3.72"
+    kotlin("jvm") version "1.4.21"
     jacoco
     `maven-publish`
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_13
-    targetCompatibility = JavaVersion.VERSION_13
+    sourceCompatibility = JavaVersion.VERSION_15
+    targetCompatibility = JavaVersion.VERSION_15
 }
 
-val moduleName = "com.github.asyncmc.protocol.bedrock"
+val moduleName = "com.github.asyncmc.protocol.java"
 val isSnapshot = version.toString().endsWith("SNAPSHOT")
 
 repositories {
