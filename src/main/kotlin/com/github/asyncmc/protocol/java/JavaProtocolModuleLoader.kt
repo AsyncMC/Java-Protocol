@@ -18,20 +18,23 @@
 
 package com.github.asyncmc.protocol.java
 
-import com.github.asyncmc.module.api.Module
-import com.github.asyncmc.module.api.ModuleLifecycle
-import com.github.asyncmc.module.api.ModuleLoader
-import com.github.asyncmc.module.api.Server
-import kotlinx.coroutines.CoroutineScope
+import com.github.asyncmc.module.api.*
+import java.net.URL
 
-/**
- * @author joserobjr
- * @since 2021-03-17
- */
-internal class JavaProtocolModule(
-    moduleLoader: ModuleLoader, server: Server, name: String, secrets: ModuleLoader.LoadingSecrets
-): Module(moduleLoader, server, name, secrets) {
-    override fun CoroutineScope.lifecycleChanged(newState: ModuleLifecycle) {
+internal class JavaProtocolModuleLoader: ModuleLoader() {
+    override val name: String
+        get() = "Java Edition Protocol"
+    override val version: String
+        get() = "0.1.0-SNAPSHOT"
+    override val description: String
+        get() = "Allows players to connect using Minecraft Java Edition"
+    override val authors: Set<ContactInformation>
+        get() = setOf(ContactInformation("José Roberto de Araújo Júnior", "joserobjr@powernukkit.org"))
+    override val sourceCode: URL
+        get() = URL("https://github.com/AsyncMC/Java-Protocol")
+
+    @InternalModuleApi
+    override fun createModules(server: Server, secrets: LoadingSecrets): List<Module> {
         TODO("Not yet implemented")
     }
 }

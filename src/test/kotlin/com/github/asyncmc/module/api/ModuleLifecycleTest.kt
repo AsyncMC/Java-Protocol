@@ -16,22 +16,21 @@
  *  along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package com.github.asyncmc.protocol.java
+package com.github.asyncmc.module.api
 
-import com.github.asyncmc.module.api.Module
-import com.github.asyncmc.module.api.ModuleLifecycle
-import com.github.asyncmc.module.api.ModuleLoader
-import com.github.asyncmc.module.api.Server
-import kotlinx.coroutines.CoroutineScope
+import org.junit.jupiter.api.Test
+import kotlin.test.assertEquals
+import kotlin.test.assertNull
 
 /**
  * @author joserobjr
  * @since 2021-03-17
  */
-internal class JavaProtocolModule(
-    moduleLoader: ModuleLoader, server: Server, name: String, secrets: ModuleLoader.LoadingSecrets
-): Module(moduleLoader, server, name, secrets) {
-    override fun CoroutineScope.lifecycleChanged(newState: ModuleLifecycle) {
-        TODO("Not yet implemented")
+internal class ModuleLifecycleTest {
+
+    @Test
+    fun getPrevious() {
+        assertNull(ModuleLifecycle.CONSTRUCTION.previous)
+        assertEquals(ModuleLifecycle.CONSTRUCTION, ModuleLifecycle.PRE_INIT.previous)
     }
 }
